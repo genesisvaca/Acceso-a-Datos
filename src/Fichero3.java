@@ -4,7 +4,7 @@ import java.net.URISyntaxException;
 
 public class Fichero3 {
     public static void main(String[] args) throws URISyntaxException {
-        //  FICHERO 3. Hacer una ruta con URI. Crear el objeto.
+        // TODO FICHERO 3. Hacer una ruta con URI. Crear el objeto.
         //  Verificar que existe(else if). Si es un directorio o archivo (else if) (try-catch)
         URI uri = new URI("file:///C:/Users/AlumnoAfternoon/Documents/Pruebas-Java/hijo.txt");
         File archivo = new File(uri);
