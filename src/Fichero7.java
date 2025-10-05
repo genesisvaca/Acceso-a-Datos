@@ -2,74 +2,88 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
 public class Fichero7 {
-    private static final String DIR = "C:\\Users\\AlumnoAfternoon\\Documents\\Pruebas-Java\\Categoria";
-    private static final String FILE = "catalogo.txt";
-    private static final String FILELIBRO = "libro.txt";
-    
+    // Ruta base donde se crearán las carpetas de categorías
+    private static final String DIR_BASE = "C:\\biblioteca";
+
     public void organizarBiblioteca() throws IOException {
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println("Introduce el nombre de la categoría: ");
-        String categoria = "";
-        Scanner sc = new Scanner(categoria);
+        System.out.print("Introduce el nombre de la categoría: ");
+        String categoria = sc.nextLine().trim();
 
-        categoria += DIR;
+        // Crea el directorio de la categoría dentro de la ruta base
+        File dirCategoria = new File(DIR_BASE + "\\" + categoria);
 
-        File dirCategoria = new File(DIR);
-
-        if (!dirCategoria.exists()){
+        if (!dirCategoria.exists()) {
             dirCategoria.mkdirs();
-            System.out.println("La categoría '" + categoria + "' creada exitosamente");
-        } else 
-        /*
-        // Directorio padre que acabamos de crear en la Ruta de documentos
-        File dirCategoria = new File(DIR);
-
-        // Nombre o ruta relativa al fichero que acabo de crear
-        String archivoCatalogo= FILE;
-        
-        // Creo una instancia File utilizando el constructor y la variable de arriba
-        File archivo = new File(dirCategoria, archivoCatalogo);
-
-        boolean fin = false;
-
-        do{
-            if (!dirCategoria.exists()){
-                System.out.println("El directorio no existe.");
-                dirCategoria.mkdir();
-                System.out.println("Directorio creado correctamente");
-            } else if (!archivo.exists()){
-                System.out.println("El directorio no existe.");
-                archivo.createNewFile();
-                System.out.println("Archivo creado correctamente.");
-            } else {
-                System.out.println("El directorio y el archivo ya existe");
-                fin = true;
-            }
-        }while(!fin);*/
-    }
-    
-    public void verificarLibro() {
-        
-    }
-    
-    public static void main (String[] args) throws IOException {
-        
-        System.out.println("ORGANIZADOR DE BIBLIOTECA");
-        System.out.println("1. Organizar biblioteca.");
-        System.out.println("2. Verificar Existencia Libro.");
-        System.out.println("3. Crear nuevo directorio.");
-
-        String respuesta = "";
-        Scanner sc = new Scanner(respuesta);
-        
-        switch (respuesta){
-            case "1":
-                Fichero7 organizador = new Fichero7();
-                organizador.organizarBiblioteca();
+            System.out.println("✓ Categoría '" + categoria + "' creada exitosamente");
+        } else {
+            System.out.println("✓ La categoría '" + categoria + "' ya existe");
         }
-        
-        
+
+        // Crea el archivo catálogo dentro de la categoría
+        File catalogo = new File(dirCategoria, "catalogo.txt");
+        if (!catalogo.exists()) {
+            catalogo.createNewFile();
+            System.out.println("✓ Catálogo creado en: " + catalogo.getAbsolutePath());
+        } else {
+            System.out.println("✓ El catálogo ya existe en: " + catalogo.getAbsolutePath());
+        }
     }
 
+    public void verificarLibro() throws IOException {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Introduce la categoría del libro: ");
+        String categoria = sc.nextLine().trim();
+
+        System.out.print("Introduce el nombre del libro (con extensión .txt): ");
+        String nombreLibro = sc.nextLine().trim();
+
+        File libro = new File(DIR_BASE + "\\" + categoria + "\\" + nombreLibro);
+
+        if (libro.exists()) {
+            System.out.println("✓ El libro existe en: " + libro.getAbsolutePath());
+            System.out.println("Tamaño: " + libro.length() + " bytes");
+        } else {
+            System.out.println("✗ El libro no existe en: " + libro.getAbsolutePath());
+            System.out.print("¿Quieres crear el libro? (s/n): ");
+            String respuesta = sc.nextLine().trim().toLowerCase();
+
+            if (respuesta.equals("s")) {
+                libro.getParentFile().mkdirs(); // crea directorios intermedios si no existen
+                libro.createNewFile();
+                System.out.println("✓ Libro creado exitosamente en: " + libro.getAbsolutePath());
+            } else {
+                System.out.println("No se ha creado el libro.");
+            }
+        }
+    }
+
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+        Fichero7 organizador = new Fichero7();
+
+        System.out.println("=== ORGANIZADOR DE BIBLIOTECA ===");
+        System.out.println("1. Organizar biblioteca");
+        System.out.println("2. Verificar existencia de libro");
+        System.out.print("Selecciona una opción: ");
+        String opcion = sc.nextLine();
+
+        switch (opcion) {
+            case "1":
+                organizador.organizarBiblioteca();
+                break;
+            case "2":
+                organizador.verificarLibro();
+                break;
+            default:
+                System.out.println("Opción no válida");
+        }
+    }
 }
