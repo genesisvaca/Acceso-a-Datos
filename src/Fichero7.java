@@ -2,16 +2,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Scanner;
-
 public class Fichero7 {
     // Ruta base donde se crearán las carpetas de categorías
+    private static Scanner sc = new Scanner(System.in);
     private static final String DIR_BASE = "C:\\biblioteca";
 
     public void organizarBiblioteca() throws IOException {
-        Scanner sc = new Scanner(System.in);
 
         System.out.print("Introduce el nombre de la categoría: ");
         String categoria = sc.nextLine().trim();
@@ -37,7 +33,6 @@ public class Fichero7 {
     }
 
     public void verificarLibro() throws IOException {
-        Scanner sc = new Scanner(System.in);
 
         System.out.print("Introduce la categoría del libro: ");
         String categoria = sc.nextLine().trim();
@@ -66,7 +61,7 @@ public class Fichero7 {
     }
 
     public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
+
         Fichero7 organizador = new Fichero7();
 
         System.out.println("=== ORGANIZADOR DE BIBLIOTECA ===");
