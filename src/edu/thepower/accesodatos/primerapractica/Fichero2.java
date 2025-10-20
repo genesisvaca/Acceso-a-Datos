@@ -1,3 +1,5 @@
+package edu.thepower.accesodatos.primerapractica;
+
 import java.io.File;
 
 public class Fichero2 {

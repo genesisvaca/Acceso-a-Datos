@@ -1,3 +1,5 @@
+package edu.thepower.accesodatos.primerapractica;
+
 import java.io.File;
 import java.net.URI;
 import java.util.Scanner;
