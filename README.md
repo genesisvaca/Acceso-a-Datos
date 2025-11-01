@@ -190,5 +190,5 @@ java edu.thepower.accesodatos.segundapractica.ejercicio3.Ejercicio3Log
 
 This repository will continue evolving throughout the academic year.
 
-Stay tuned — each new delivery will expand this repository with cleaner examples and detailed documentation.
+*Stay tuned — each new delivery will expand this repository with cleaner examples and detailed documentation.*
 ##
