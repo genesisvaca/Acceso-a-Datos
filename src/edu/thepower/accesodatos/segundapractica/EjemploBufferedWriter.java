@@ -14,12 +14,12 @@ public class EjemploBufferedWriter {
             "Esta es la segunda línea",
             "Final den documento"
     }; ;
-    private static final String ENTRADA = "C:\\Users\\AlumnoAfternoon\\Documents\\Acceso-a-Datos\\Acceso-a-Datos\\resources\\salida_buffered.txt";
+    private static final String SALIDA = "D:\\ThePower\\DAM-II\\Acceso-a-Datos\\resources\\salida_buffered.txt";
 
     public static void main(String[] args) {
 
         // BufferedWriter envuelve al objeto FileWriter para añadir Buffering, try-catch cierra automáticamente
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(ENTRADA))){
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(SALIDA))){
 
             // ucle for-each que escribe linea a linea con salto incluido
             for(String linea: LINEAS){

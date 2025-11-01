@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class EjemploFileWriter {
 
-    private static final String SALIDA = "C:\\Users\\AlumnoAfternoon\\Documents\\Acceso-a-Datos\\Acceso-a-Datos\\resources\\salida.txt";
+    private static final String SALIDA = "D:\\ThePower\\DAM-II\\Acceso-a-Datos\\resources\\salida_buffered.txt";
     private static final String CONTENIDO = "Primera línea\nSegunda línea\nTercera línea";
 
 

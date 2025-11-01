@@ -9,7 +9,7 @@ import java.io.RandomAccessFile;
 
 public class EjemploRandomAccessFile {
 
-    private static final String DATOS = "C:\\Users\\AlumnoAfternoon\\Documents\\Acceso-a-Datos\\Acceso-a-Datos\\resources\\datos.bin";
+    private static final String DATOS = "D:\\ThePower\\DAM-II\\Acceso-a-Datos\\resources\\datos.bin";
     private static final String READWRITE = "rw";
 
     public static void main(String[] args) {

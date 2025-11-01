@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class EjemploBufferedReader {
 
-    private static final String ENTRADA = "C:\\Users\\AlumnoAfternoon\\Documents\\Acceso-a-Datos\\Acceso-a-Datos\\resources\\entrada.txt";
+    private static final String ENTRADA = "D:\\ThePower\\DAM-II\\Acceso-a-Datos\\resources\\entrada.txt";
 
     public static void main(String[] args) {
 
