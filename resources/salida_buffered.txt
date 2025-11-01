@@ -1,0 +1,4 @@
+Encabezado del documento
+Esta es la primera línea del contenido
+Esta es la segunda línea
+Final den documento
