@@ -1,11 +1,19 @@
 # 📂 Acceso-a-Datos — Java File Access Practice
-### 🧩 Overview
 
-This repository contains my coursework for the Acceso a Datos (Data Access) subject in the second year of the DAM (Multiplatform Application Development) program.
+<p align="center">
+  <img src="https://img.shields.io/badge/Project-Acceso%20a%20Datos-52796F?style=for-the-badge&logoColor=white" alt="Project Badge">
+  <img src="https://img.shields.io/badge/Language-Java-9B5DE5?style=for-the-badge&logo=java&logoColor=white" alt="Java Badge">
+  <img src="https://img.shields.io/badge/Database-MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL Badge">
+  <img src="https://img.shields.io/badge/Topic-Data%20Access%20%26%20Persistence-84A59D?style=for-the-badge" alt="Topic Badge">
+  <img src="https://img.shields.io/badge/Environment-JDBC%20%7C%20DAO%20Pattern-FEC89A?style=for-the-badge" alt="Environment Badge">
+  <img src="https://img.shields.io/badge/Status-In%20Progress-FD6F96?style=for-the-badge" alt="Status Badge">
+</p>
 
-Each project focuses on a different aspect of Java I/O — from the fundamentals of the File class to advanced buffered reading/writing, random access, and applied exercises such as log systems, JSON parsing, environment loading, and incremental backups.
+This repository contains my coursework for the *Acceso a Datos* (**Data Access**) subject in the second year of the *DAM* (**Multiplatform Application Development**) program.
 
-All exercises are written entirely in Java:
+Each project focuses on a different aspect of **Java I/O** — from the fundamentals of the *File class* to advanced buffered reading/writing, random access, and applied exercises such as **log systems**, **JSON parsing**, **environment loading**, and **incremental backups**.
+
+All exercises are written entirely in **Java**:
 
 - 📄 Primera práctica de Acceso a Datos → Basic file management (File, directories, URIs).
 
@@ -71,8 +79,8 @@ Acceso-a-Datos/
 | **Encoding** | UTF-8 (explicitly set in all readers/writers) |
 | **IDE** | IntelliJ IDEA |
 | **Version Control** | Git + GitHub |
-##
-### 📚 Summary of Practices
+
+## 📚 Summary of Practices
 ### 🧱 First Practice — Basic File Management
 
 > *Based on Primera práctica de Acceso a Datos*
@@ -91,7 +99,6 @@ Covers:
 
 Classes: `Fichero1` – `Fichero9`
 
-##
 
 ### 💾 Second Practice — Java I/O Streams
 
@@ -121,8 +128,6 @@ Implements a lightweight log writer that:
 
 - Rotates the log when reaching a size limit (e.g., 1 KB)
 
-##
-
 ### 🧩 Optional Exercises
 ### Optional 1 — Simple JSON Parser
 
@@ -139,9 +144,7 @@ Provides a helper `getEnv()` method with default values.
 Performs backup only for files new or modified since the last recorded backup timestamp.
 Stores backup metadata in `.lastbackup`.
 
-##
-
-### 🧠 Learning Objectives
+## 🧠 Learning Objectives
 
 - Understand the Java I/O hierarchy (Reader, Writer, InputStream, OutputStream)
 
@@ -161,9 +164,7 @@ Stores backup metadata in `.lastbackup`.
 
   - proper exception handling
 
-##
-
-### ▶️ How to Run
+## ▶️ How to Run
 ```
 # Clone repository
 git clone https://github.com/yourusername/Acceso-a-Datos.git
@@ -176,19 +177,14 @@ java edu.thepower.accesodatos.segundapractica.ejercicio1.Ejercicio1Contador
 java edu.thepower.accesodatos.segundapractica.ejercicio2.Ejercicio2Merge
 java edu.thepower.accesodatos.segundapractica.ejercicio3.Ejercicio3Log
 ```
-##
-
-### 🧾 Author
+## 🧾 Author
 
 ### Génesis Vaca Palma
 ### *🎓 2º DAM – Desarrollo de Aplicaciones Multiplataforma*
 💡 All exercises written manually.
 
-##
-
-### 🔄 Future Updates
+## 🔄 Future Updates
 
 This repository will continue evolving throughout the academic year.
 
 *Stay tuned — each new delivery will expand this repository with cleaner examples and detailed documentation.*
-##
